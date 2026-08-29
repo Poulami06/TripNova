@@ -1,0 +1,74 @@
+<style>
+  /* Search Input - Independent Rounded Pill */
+  .search-inp {
+    border-radius: 25px !important;
+    padding: 0.5rem 1.25rem !important;
+    font-size: 0.9rem !important;
+    border: 1px solid #ced4da !important;
+    min-width: 260px;
+    margin-right: 0.5rem;
+  }
+
+  .search-inp:focus {
+    box-shadow: none !important;
+    border-color: #fe424d !important;
+  }
+
+  /* Search Button - Independent Red Pill */
+  .btn-search {
+    background-color: #fe424d !important;
+    color: #fff !important;
+    border-radius: 25px !important;
+    padding: 0.5rem 1.25rem !important;
+    border: none !important;
+    font-size: 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    transition: 0.2s ease-in-out !important;
+  }
+
+  .btn-search:hover {
+    background-color: #e03a44 !important;
+    color: #fff !important;
+  }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/listings">
+      <i class="fa-regular fa-compass"></i>
+      <span class="fw-bold fs-5" style="color: #fe424d;">TripNova</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search" action="/listings" method="GET">
+          <input class="form-control search-inp" type="search" placeholder="Search destinations" aria-label="Search" name="q" />
+          <button class="btn btn-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Host on TripNova</a>
+        <% if (typeof currUser === "undefined" || !currUser) { %>
+          <a class="nav-link" href="/signup"><b>Sign up</b></a>
+          <a class="nav-link" href="/login"><b>Log in</b></a>
+        <% } %>
+        <% if (typeof currUser !== "undefined" && currUser) { %>
+          <a class="nav-link" href="/logout"><b>Log out</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
