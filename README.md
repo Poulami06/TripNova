@@ -1,93 +1,98 @@
-TripNova
+# TripNova
+
 TripNova is a production-ready, full-stack travel marketplace that allows users to explore international stays, create verified property listings, upload high-resolution accommodation images, inspect locations on interactive maps, and submit verified reviews. Built strictly following the MVC (Model-View-Controller) pattern, it emphasizes clean code architecture, server-side data validation, secure authentication, and cloud-native integrations.
 
-Project Highlights
-End-to-End CRUD Operations: Fully implemented RESTful architecture for listings, reviews, and user sessions.
+---
 
-Authentication & Role-Based Authorization: Secure session-based authentication using Passport.js with custom middleware protecting edit/delete privileges.
+## Project Highlights
+* End-to-End CRUD Operations:  Fully implemented RESTful architecture for listings, reviews, and user sessions.
 
-Cloud Asset Management: Integrated Cloudinary storage via Multer for optimized, cloud-based media delivery.
+* Authentication & Role-Based Authorization: Secure session-based authentication using Passport.js with custom middleware protecting edit/delete privileges.
 
-Geocoding & Interactive Maps: Mapbox/Leaflet-powered coordinate visualization for location pinning.
+* Cloud Asset Management: Integrated Cloudinary storage via Multer for optimized, cloud-based media delivery.
 
-Resilient Data Layer: Production-configured MongoDB Atlas cluster with Non-SRV replica-set failover and Joi schema validation.
+* Geocoding & Interactive Maps: Mapbox/Leaflet-powered coordinate visualization for location pinning.
 
-Responsive UI: Built with dynamic EJS templating, custom styling, and Bootstrap 5 for multi-device compatibility.
+* Resilient Data Layer: Production-configured MongoDB Atlas cluster with Non-SRV replica-set failover and Joi schema validation.
 
-Tech Stack
-Frontend
+* Responsive UI: Built with dynamic EJS templating, custom styling, and Bootstrap 5 for multi-device compatibility.
 
-HTML5
-CSS3
-Bootstrap 5
-JavaScript
-EJS
-Backend
+---
 
-Node.js
-Express.js
-Database
+## Tech Stack
+### Frontend
 
-MongoDB Atlas
-Mongoose
-Authentication
+* HTML5
+* CSS3
+* Bootstrap 5
+* JavaScript
+* EJS
 
-Passport.js
-Express Session
-Third-Party Services
+### Backend
+* Node.js
+* Express.js
 
-Cloudinary
-Geocoding API
+### Database
+* MongoDB Atlas
+* Mongoose
 
+### Authentication
+* Passport.js
+* Express Session
 
-Core Architecture
-The codebase enforces strict separation of concerns via the MVC design pattern:
+### Third-Party Services
+* Cloudinary
+* Geocoding API
 
-Models (/models): Define Mongoose schemas for Listings, Reviews, and Users with referential integrity.
+---
 
-Views (/views): Server-side rendered dynamic UI using EJS, layouts (boilerplate.ejs), and reusable partials.
+## Core Features
 
-Controllers (/controllers): Centralized business logic, query handling, and async request management.
+### User Management
+* User Registration
+* User Login & Logout
+* Session-Based Authentication
+* Authorization Middleware
 
-Routes (/routes): Modular RESTful routing divided into listings, reviews, and user modules.
+### Listing Management
+* Create Listings
+* View Listings
+* Update Listings
+* Delete Listings
+* Image Upload Support
 
-Middlewares (middleware.js): Interceptors for authentication status, ownership verification, and schema validation.
+### Reviews System
+* Add Reviews
+* Delete Reviews
+* Rating Functionality
+* Data Validation
 
-Core Features
-User Management
+### Maps & Location Services
+* Geocoding Support
+* Interactive Location Maps
+* Destination Visualization
 
-User Registration
-User Login & Logout
-Session-Based Authentication
-Authorization Middleware
-Listing Management
+---
 
-Create Listings
-View Listings
-Update Listings
-Delete Listings
-Image Upload Support
-Reviews System
+## Architecture
 
-Add Reviews
-Delete Reviews
-Rating Functionality
-Data Validation
-Maps & Location Services
-
-Geocoding Support
-Interactive Location Maps
-Destination Visualization
-
-Architecture
 The application follows the MVC (Model-View-Controller) pattern:
+
+```text
 Models       → Database Logic
 Views        → User Interface (EJS)
 Controllers  → Business Logic
 Routes       → Request Handling
+```
+
 This architecture improves code organization, maintainability, and scalability.
 
-Project Structure
+---
+
+
+## Project Structure
+
+```text
 TripNova/
 ├── controllers/
 ├── models/
@@ -98,43 +103,69 @@ TripNova/
 ├── cloudConfig.js
 ├── app.js
 └── package.json
+```
 
-Installation
+---
+
+
+## Installation
+
+```bash
 git clone https://github.com/Poulami06/TripNova.git
 cd TripNova
 npm install
+```
 
 Create a .env file and add:
+```env
 ATLAS_DB_URL=
 SECRET=
 CLOUD_NAME=
 CLOUD_API_KEY=
 CLOUD_API_SECRET=
+```
 
 Seed the database:
+```bash
 node init/index.js
+```
 
 Run the application:
+```bash
 npm start
+```
 
 Server runs on:
+```bash
 http://localhost:8080
+```
 
-Learning Outcomes
+---
+
+## Learning Outcomes
+
 Through this project, I gained practical experience with:
 
-RESTful API Design
-Authentication & Authorization
-MongoDB Data Modeling
-Cloud Storage Integration
-Geolocation Services
-MVC Architecture
-Full-Stack Web Development
+* RESTful API Design
+* Authentication & Authorization
+* MongoDB Data Modeling
+* Cloud Storage Integration
+* Geolocation Services
+* MVC Architecture
+* Full-Stack Web Development
 
-Project Links:
-Live Demo
-https://tripnova-lw37.onrender.com/listings
+---
 
-GitHub Repository
-https://github.com/Poulami06/TripNova
+## Project Links:
 
+### Live Demo
+🔗https://tripnova-lw37.onrender.com/listings
+
+### GitHub Repository
+🔗https://github.com/Poulami06/TripNova
+
+## Developer
+
+**Poulami Haldar**
+
+[GitHub Profile](https://github.com/Poulami06)
